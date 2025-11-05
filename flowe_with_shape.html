@@ -1,0 +1,59 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shape</title>
+     <style>
+        .flower {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: #ff4081; /* Pink flower center */
+            border-radius: 50%;
+            margin: 50px auto;
+        }
+
+        .petal {
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background-color: #ff80ab; /* Lighter pink petals */
+            border-radius: 50%;
+        }
+
+        /* Position petals around the center */
+        .petal:nth-child(1) {
+            top: -30px;
+            left: 25px;
+            transform: rotate(45deg);
+        }
+
+        .petal:nth-child(2) {
+            top: 25px;
+            left: 75px;
+            transform: rotate(135deg);
+        }
+
+        .petal:nth-child(3) {
+            top: 100px;
+            left: 25px;
+            transform: rotate(225deg);
+        }
+
+        .petal:nth-child(4) {
+            top: 25px;
+            left: -25px;
+            transform: rotate(315deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+    </div>
+</body>
+</html>

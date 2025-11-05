@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us Page</title>
+    <script type="text/javascript">
+        // Validation function
+        function validation() {
+            var nm = document.getElementById("name_id").value;
+            var em = document.getElementById("email_id").value;
+            var pw = document.getElementById("password_id").value;
+            var ph = document.getElementById("phone_id").value;
+            var ad = document.getElementById("address_id").value;
+
+            // Check if all fields are empty
+            if (nm === "" && em === "" && pw === "" && ph === "" && ad === "") {
+                alert("Please enter all fields");
+                return false;
+            }
+
+            // Name validation
+            if (nm === "") {
+                alert("Enter Name");
+                return false;
+            } else if (nm.length < 4) {
+                alert("Name should be at least 4 characters long");
+                return false;
+            }
+
+            // Email validation
+            if (em === "") {
+                alert("Enter Email");
+                return false;
+            } else if (!/^[A-Za-z0-9._%+-]+@[A-Za-z.-]+\.[A-Za-z]{2,}$/.test(em)) {
+                alert("Enter a valid Email ID");
+                return false;
+            }
+
+            // Password validation
+            if (pw === "") {
+                alert("Enter Password");
+                return false;
+            } else if (pw.length < 6) {
+                alert("Password should be at least 6 characters long");
+                return false;
+            }
+
+            // Phone validation
+            if (ph === "") {
+                alert("Enter Phone number");
+                return false;
+            } else if (!/^\d{10}$/.test(ph)) {
+                alert("Enter a valid 10-digit phone number");
+                return false;
+            }
+
+            // Address validation
+            if (ad === "") {
+                alert("Enter Address");
+                return false;
+            } else if (ad.length > 100) {
+                alert("Address should be below 100 characters");
+                return false;
+            }
+
+            alert("Form Submitted Successfully!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>24B11CS039</h3>
+    <form onsubmit="return validation()" action="registration_app.php" method="POST">
+        <table border="0" cellspacing="8" cellpadding="8">
+            <tr>
+                <td colspan="2"><h2>Contact Us</h2></td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" id="name_id" /></td>
+            </tr>
+            <tr>
+                <td>Email ID:</td>
+                <td><input type="text" name="email" id="email_id" /></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" id="password_id" /></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="text" name="phone" id="phone_id" /></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea name="address" id="address_id"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="SUBMIT" />
+                    <input type="reset" value="CLEAR" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

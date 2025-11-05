@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Output</title>
+    <style>
+        .binary-output {
+            font-family: 'Courier New', monospace;
+            font-size: 48px;
+            color: #4CAF50;
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="binary-output" id="binary-output">Binary: 0</div>
+
+    <script>
+        let num = 0;
+        function updateBinaryOutput() {
+            document.getElementById('binary-output').textContent = "Binary: " + num.toString(2);
+            num++;
+        }
+
+        setInterval(updateBinaryOutput, 1000); // Update binary output every 1 second
+    </script>
+</body>
+</html>
+
