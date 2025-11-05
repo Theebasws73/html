@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <title>pseudo-element selectors Example</title>
+<style>
+ /* ::first-letter - style the first letter of a paragraph */
+p::first-letter{
+font-size:200%;
+font-weight:bold;
+color: darkred;
+}
+
+/*::firts-line - style the line of a paragraph */
+p::first-line{
+font-style: italic;
+color: green;
+}
+
+/*::before - isert content before an element */
+h2::before {
+content: "star";
+color: orange;
+}
+
+/*::after - insert content after an element */
+h2::after{
+content: "star";
+color: orange;
+}
+
+/* ::selection - style selected text */
+::selection{
+background-color: yellow;
+color: black
+}
+</style>
+</head>
+<body>

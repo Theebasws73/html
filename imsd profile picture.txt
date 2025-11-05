@@ -1,0 +1,17 @@
+<html>
+<body bgcolor="">
+<h1>My profile and My Friend's Profile/h1>
+
+<!-- Your Image-->
+<a href="https://example.com/your-profile"target="_blank">
+<img src="https://via.placeholder.com/150x150?text=You"alt="Your Profile"width="150" height="150">
+</a>
+
+<!--Friend's Image-->
+<a href="https://example.com/friend-profile"target="_blank">
+<img src="https://via.placeholder.com/150x150?text=Friend"alt="Friend's Profile"width="150" height="150">
+</a>
+
+</body>
+</html>
+

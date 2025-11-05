@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Dice Roll</title>
+    <style>
+        .dice {
+            font-family: 'Arial', sans-serif;
+            font-size: 72px;
+            color: #ff5722;
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="dice" id="dice">Roll: 1</div>
+
+    <script>
+        function rollDice() {
+            const roll = Math.floor(Math.random() * 6) + 1;
+            document.getElementById('dice').textContent = "Roll: " + roll;
+        }
+
+        setInterval(rollDice, 1000);  // Simulate a dice roll every second
+    </script>
+</body>
+</html>
